@@ -12,6 +12,14 @@
             width: 100%;
             height: 100%;
         }
+        .title {
+            position: absolute;
+            width: 100%;
+            font-size: 34px;
+            color: #fff;
+            top: 20px;
+            text-align: center;
+        }
         .result {
             position: absolute;
             height: 320px;
@@ -136,27 +144,29 @@
     </style>
 </head>
 <body>
-<div id="main" class="wall">
-    <div class="result-btn">
-       <a href="./result.html" target="_blank">获奖名单</a>
-       <a href="./add.html">人员添加</a>
+<div class="title">年终盛宴</div>
+<div id="app">
+    <div id="main" class="wall">
+        <div class="result-btn">
+           <a href="./result.html" target="_blank">获奖名单</a>
+        </div>
     </div>
-</div>
-<div id="result" class="result">
-</div>
-<div id="tools" class="tools">
-     <button
-        v-for="value in btns"
-        @click="onClick(value)"
-        class="pure-button"
-        :class="{ 'button-error': selected == value}"
-       >{{value}}</button>
-    <button
-       class="pure-button"
-       @click="toggle"
-       :class="{'button-secondary': !running,
-               'button-success': running}">{{running?'停!':'开始'}}</button>
-    <button class="pure-button button-warning" @click="reset">重置</button>
+    <div id="result" class="result">
+    </div>
+    <div id="tools" class="tools">
+         <button
+            v-for="value in btns"
+            @click="onClick(value)"
+            class="pure-button"
+            :class="{ 'button-error': selected == value}"
+           >{{value}}</button>
+        <button
+           class="pure-button"
+           @click="toggle"
+           :class="{'button-secondary': !running,
+                   'button-success': running}">{{running?'停!':'开始'}}</button>
+        <button class="pure-button button-warning" @click="reset">重置</button>
+    </div>
 </div>
 <script type="text/javascript" src="js/zepto.js"></script>
 <script type="text/javascript" src="js/vue.js"></script>
@@ -178,7 +188,7 @@
             userList.forEach(function(item, index){
                 item.index = index;
                 var key = getKey(item);
-                var color = choosed[key] ? 'yellow' : 'white';
+                var color = choosed[key] ? 'white' : 'yellow';
                 html.push('<li><a href="#" style="color: ' + color + ';">' + item.name + '</a></li>');
             });
             html.push('</ul>');
@@ -186,7 +196,7 @@
         };
         var lottery = function(count){
             var list = canvas.getElementsByTagName('a');
-            var color = 'yellow';
+            var color = 'white';
             var ret = userList
                 .filter(function(m, index){
                     m.index = index;
@@ -217,10 +227,10 @@
         new Vue({
             el: '#tools',
             data: {
-                selected: 30,
+                selected: 1,
                 running: false,
                 btns: [
-                    30, 10, 5, 2, 1
+                    1
                 ]
             },
             mounted () {
@@ -229,7 +239,7 @@
                     textColour: null,
                     initial: speed(),
                     dragControl: 1,
-                    textHeight: 14
+                    textHeight: 16
                 });
             },
             methods: {
@@ -243,6 +253,10 @@
                     $('#result').css('display', 'none');
                     $('#main').removeClass('mask');
                     this.selected = num;
+                },
+                hideMask: function() {
+                    $('#result').css('display', 'none');
+                    $('#main').removeClass('mask');
                 },
                 toggle: function(){
                     if(this.running){
