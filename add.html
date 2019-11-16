@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="screen-orientation" content="portrait">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+    <title>年终盛宴</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/wall.css">
+    <style type="text/css">
+      .content {
+        width: 400px;
+        height: 500px;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #aaa;
+      }
+    </style>
+</head>
+<body>
+<div id="main" class="wall">
+  <div class='content'>
+    <h2>添加名单</h2>
+    <el-input v-model="name"></el-input>
+  </div>
+</div>
+<script type="text/javascript" src="js/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="./js/element.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="./css/element.css">
+<script type="text/javascript">
+    new Vue({
+        el: '#main',
+        data: {
+            name: '123'
+        },
+    })
+</script>
+</body>
+</html>
