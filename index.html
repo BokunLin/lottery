@@ -179,7 +179,17 @@
         };
         var createHTML = function(){
             var html = [ '<ul>' ];
-            userList = localStorage.getItem('userList') || member;
+            console.warn('----------------------');console.warn('member', member);
+            
+            member.forEach(function (item) {
+                for(var i = 0; i < item.count; i++) {
+                    userList.push({
+                        phone: item.phone,
+                        name: '奖'
+                    })
+                }
+            });
+            console.warn('----------------------');console.warn('userList', userList);
             userList.forEach(function(item, index){
                 item.index = index;
                 var key = getKey(item);
@@ -200,7 +210,7 @@
                 })
                 .map(function(m){
                     const a = Object.assign({
-                      score: Math.random() * m.weight
+                      score: Math.random()
                     }, m);
                     return a; 
                 })
