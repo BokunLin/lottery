@@ -175,26 +175,23 @@
             return [0.1 * Math.random() + 0.01, -(0.1 * Math.random() + 0.01)];
         };
         var getKey = function(item){
-            return item.name + '-' + item.phone;
+            return item.name + '-' + item.phone + '-' + item.index;
         };
         var createHTML = function(){
             var html = [ '<ul>' ];
-            console.warn('----------------------');console.warn('member', member);
             
             member.forEach(function (item) {
                 for(var i = 0; i < item.count; i++) {
                     userList.push({
                         phone: item.phone,
-                        name: '奖'
+                        name: '奖',
+                        index: i
                     })
                 }
             });
-            console.warn('----------------------');console.warn('userList', userList);
             userList.forEach(function(item, index){
                 item.index = index;
-                var key = getKey(item);
                 var color = 'yellow';
-                // var color = choosed[key] ? 'white' : 'yellow';
                 html.push('<li><a href="#" style="color: ' + color + ';">' + item.name + '</a></li>');
             });
             html.push('</ul>');
@@ -223,6 +220,7 @@
                   list[m.index].style.color = color;
                   return m.name + '<br/>' + m.phone; 
                 });
+            console.warn('----------------------');console.warn('choosed', Object.keys(choosed).length);
             localStorage.setItem('choosed', JSON.stringify(choosed));
             return ret;
         };
