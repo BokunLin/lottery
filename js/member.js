@@ -1,5 +1,5 @@
 var member = [
-  {phone: '保湿面膜',	count: 45},
+  {phone: '保湿面膜',	count: 40},
   {phone: '黑枸杞',	count: 18},
   {phone: '伊立信洁面摩丝',	count: 3},
   {phone: '伊立信眼部舒缓液',	count: 15},
