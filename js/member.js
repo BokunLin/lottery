@@ -5,7 +5,6 @@ var member = [
   {phone: '伊立信眼部舒缓液',	count: 15},
   {phone: '思乐琪面膜',	count: 7}, 
   {phone: '澄亮眼部精华乳',	count: 12},
-  {phone: '伊立信水份面膜',	count: 1},
   {phone: '伊立信净白调理霜',	count: 3},
   {phone: '洗衣卡',	count: 19},
   {phone: '滋养颈部护理',	count: 20},
