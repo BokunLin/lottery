@@ -4,7 +4,6 @@ var member = [
   {phone: '伊立信眼部舒缓液',	count: 13},
   {phone: '思乐琪面膜',	count: 5}, 
   {phone: '澄亮眼部精华乳',	count: 12},
-  {phone: '伊立信净白调理霜',	count: 1},
   {phone: '洗衣卡',	count: 19},
   {phone: '滋养颈部护理',	count: 19},
   {phone: '眼部淋巴排毒',	count: 9},
@@ -17,4 +16,3 @@ var member = [
   {phone: '小气泡',	count: 10},
   {phone: '紫易康肩颈',	count: 17},
   {phone: '香橙精油',	count: 8}
-
