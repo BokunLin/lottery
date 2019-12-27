@@ -16,3 +16,4 @@ var member = [
  {phone: '小气泡', count: 10}, 
  {phone: '紫易康肩颈', count: 13}, 
  {phone: '香橙精油', count: 5}
+]
