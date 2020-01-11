@@ -1,19 +1,13 @@
 var member = [ 
- {phone: '保湿面膜', count: 30}, 
- {phone: '黑枸杞', count: 15}, 
- {phone: '伊立信眼部舒缓液', count: 9}, 
- {phone: '思乐琪面膜', count: 2},  
- {phone: '澄亮眼部精华乳', count: 11}, 
- {phone: '洗衣卡', count: 7}, 
+ {phone: '保湿面膜', count: 27}, 
+ {phone: '黑枸杞', count: 5}, 
+ {phone: '伊立信眼部舒缓液', count: 5}, 
+ {phone: '澄亮眼部精华乳', count: 10}, 
+ {phone: '洗衣卡', count: 5}, 
  {phone: '滋养颈部护理', count: 17}, 
  {phone: '眼部淋巴排毒', count: 7}, 
- {phone: '墨壮尔面膜', count: 0}, 
- {phone: '手部经络全息疗法', count: 10}, 
+  {phone: '手部经络全息疗法', count: 10}, 
  {phone: '头部放松减压疗法', count: 8}, 
  {phone: '述古悬灸护理', count: 13}, 
- {phone: '腋下淋巴排毒', count: 9}, 
- {phone: '颈部淋巴排毒', count: 8}, 
  {phone: '小气泡', count: 10}, 
- {phone: '紫易康肩颈', count: 13}, 
- {phone: '香橙精油', count: 5}
-]
+ {phone: '香橙精油', count: 2}
